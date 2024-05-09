@@ -6,4 +6,5 @@
 ## To visulaize the data in UCSC browser:
 ##     1. Need to get the URL of the data (so upload your data in any one of them: google drive, github, or cyverse) I'm using cyverse because it is easier to keep all your file together in a folder.
 ##     2. Follow this syntax code "track type=bigWig name="bigWig_Mtb4" description="A chIP-seq data_mtb" color=255,0,0 bigDataUrl=https://data.cyverse.org/dav-anon/iplant/home/surabhi/Chip_seq/mtb1.output.bw "
-##     3. Now you can get a png of your data on genome track (Alter according to your need: colour, height, 
+##     3. Now you can get a png of your data on genome track (Alter according to your need: colour, height, and other)
+##     4. Now you need annotation of your data that you can generate there are multiple ways:
