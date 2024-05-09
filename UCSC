@@ -1,12 +1,43 @@
-## Here I'm trying to plot a chIP seq peak figure where the highest peakes are expaneded to know the genes and other information .
+To visualize a ChIP-seq peak figure where the highest peaks are expanded to show the genes and other information:
 
+1. **Prepare your ChIP-seq data**:
+   - Start with your ChIP-seq data (in MACS2 output BED format, after normalization, and converted to BEDGRAPH and then BIGWIG format).
 
-## Firstly as I have chipseq data  (macs2_output_bed_file after normalization and then converted to bedgraph and then bigwig format)
+2. **Upload the data for visualization**:
+   - Upload your data to a file-sharing platform such as Google Drive, GitHub, or CyVerse. For this example, I'll use CyVerse because it makes it easier to keep all your files together in a folder.
 
-## To visulaize the data in UCSC browser:
-##     1. Need to get the URL of the data (so upload your data in any one of them: google drive, github, or cyverse) I'm using cyverse because it is easier to keep all your file together in a folder.
-##     2. Follow this syntax code "track type=bigWig name="bigWig_Mtb4" description="A chIP-seq data_mtb" color=255,0,0 bigDataUrl=https://data.cyverse.org/dav-anon/iplant/home/surabhi/Chip_seq/mtb1.output.bw "
-##     3. Now you can get a png of your data on genome track (Alter according to your need: colour, height, and other)
-##     4. You need annotation of your data that you can generate  multiple ways (HOMER, Bedtools):
-##     5. You know about regions with highest peaks make a text file (bed format with the gene data that you need to visualize): {In my case I took the genes showing the peak score greater than 300) 
-##     6. 
+3. **Get the URL of your data**:
+   - Follow this syntax code to create a track in the UCSC Genome Browser:
+     ```
+     track type=bigWig name="bigWig_Mtb4" description="ChIP-seq data for Mtb" color=255,0,0 bigDataUrl=https://data.cyverse.org/dav-anon/iplant/home/surabhi/Chip_seq/mtb1.output.bw
+     ```
+   - Replace the URL (`https://data.cyverse.org/dav-anon/iplant/home/surabhi/Chip_seq/mtb1.output.bw`) with the actual URL of your BIGWIG file.
+
+4. **Visualize the data in UCSC Genome Browser**:
+   - You can now view your data in the UCSC Genome Browser and adjust the settings according to your needs, such as color, height, etc.
+
+5. **Prepare gene annotations**:
+   - You can generate gene annotations in multiple ways, such as using HOMER or Bedtools.
+
+6. **Identify regions with the highest peaks**:
+   - Make a text file in BED format containing the genes associated with peak scores greater than a certain threshold (e.g., >300).
+   - The columns in the file should include: chromosome, start position, end position, gene name, strand, and color code for visualization.
+   - For example:
+     ```
+     track name="Genes" itemRgb=On
+     NC_000962.3    0    1524    Rv0001    0    +    0    1524    255,255,0
+     ```
+
+7. **Upload the custom track**:
+   - Save the BED file containing gene annotations and upload it as a custom track in the UCSC Genome Browser.
+
+8. **Visualize genes together with peaks**:
+   - View the genes together with the ChIP-seq peaks in the UCSC Genome Browser.
+
+9. **Take a screenshot**:
+   - Capture a screenshot of the visualization.
+
+10. **Create a figure**:
+    - Use the screenshot to create a proper figure of the ChIP-seq data with the names of genes in the high peak regions.
+
+This process allows you to effectively visualize ChIP-seq data along with associated gene annotations, helping to identify genes associated with high peaks.
