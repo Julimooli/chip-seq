@@ -1,1 +1,1 @@
-I'm trying to visulaize this file on UCSC browser
+I'm trying to visualize chip-seq data ( UCSC browser, Circos)
